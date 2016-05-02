@@ -40,7 +40,7 @@ git checkout release/2.0
 patch -p1 < ../slibnames.patch
 SOURCE=`pwd`
 
-for TARGET_ARCH_ABI in $TARGET_ABIS; do
+for TARGET_ARCH_ABI in "${TARGET_ABIS[@]}"; do
     case $TARGET_ARCH_ABI in
     armeabi-v7a)
         TOOLCHAIN_PREFIX=arm-linux-androideabi
